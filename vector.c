@@ -1,6 +1,5 @@
 #include "vector.h"
 #include <stdio.h>
-// #include <string.h>
 #include <stdlib.h>
 // You might need other includes for printing or whatnot
 
@@ -10,6 +9,10 @@ void init(Vector *vector, int memorySize)
   vector -> memorySize = memorySize;
   vector -> size = 0;
   vector -> array = malloc(sizeof(void *) * memorySize);
+  for (int i = 0; i < memorySize; i++) {
+    // i don't know the initial value....NULL doesn't work because it's a pointer
+      (vector -> array)[i] = -1;
+  }
 }
 
 
@@ -40,7 +43,7 @@ int insert(Vector *vector, int location, int value)
     status = 0;
   }
   else {
-    if ((vector -> array)[location]) {
+    if ((vector -> array)[location] > 0) {
       int curr = (vector -> array)[location];
       (vector -> array)[location] = value;
       for (int i = location; i < (vector->size); i++) {
