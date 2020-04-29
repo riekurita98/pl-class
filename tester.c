@@ -53,16 +53,17 @@ void test2() {
         assert(1==status);
         assert(i==value);
     }
+
     for (int i=50; i < 53; i++) {
         int status = get(vector, i, &value);
         assert(0==status);
     }
 
-    // Delete a few values, and display again
+    // // Delete a few values, and display again
     assert(delete(vector,6));
     assert(delete(vector,12));
 
-    // Location 49 should no longer be there, vector has shrunk
+    // // Location 49 should no longer be there, vector has shrunk
     assert(!delete(vector,49));
 
     for (int i=0; i < 6; i++)
