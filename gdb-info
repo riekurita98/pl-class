@@ -1,0 +1,35 @@
+clang -g -o xx xx.c
+
+gdb ./xx
+
+
+step
+next -- next line of the code
+print i -- print where you are at 
+run -- run the program
+list -- show 10 lines of the program
+break {line number} -- make a break point
+clear {line number} -- clear the break point
+backtrace
+
+layout scr
+list
+list
+break "line number"
+step
+next
+continue
+-
+-
+quit
+
+
+
+
+// include guard
+if the variable is not defined
+#ifndef LINKEDLIST H
+
+define LINKEDLIST H
+#define LINKEDLIST H
+
