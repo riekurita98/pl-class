@@ -45,7 +45,7 @@ void test2() {
     {
         assert(insert(vector,0,i));
     }
-print(vector);
+
     int value;
     for (int i=0; i < 50; i++)
     {
